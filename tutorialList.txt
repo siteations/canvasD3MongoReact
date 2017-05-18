@@ -3,10 +3,12 @@
 1) https://medium.freecodecamp.com/d3-and-canvas-in-3-steps-8505c8b27444
 code at: http://blockbuilder.org/larsvers/6049de0bcfa50f95d3dcbf1e3e44ad48
 
-other d3 front-end frames and virtual dom mashups to tinker with
-2) Composing D3 Visualizations With Vue.js : https://medium.com/tyrone-tudehope/composing-d3-visualizations-with-vue-js-c65084ccb686, https://github.com/corpglory/d3vue/, https://github.com/d2bjs/d2bjs
+2) more canvas: https://bocoup.com/blog/d3js-and-canvas, https://bocoup.com/blog/2d-picking-in-canvas, https://www.visualcinnamon.com/2015/11/learnings-from-a-d3-js-addict-on-starting-with-canvas.html
 
-3) more reactd3: https://github.com/chroth7/reactD3resources, https://github.com/chroth7/reactD3resources
+other d3 front-end frames and virtual dom mashups to tinker with
+3) Composing D3 Visualizations With Vue.js : https://medium.com/tyrone-tudehope/composing-d3-visualizations-with-vue-js-c65084ccb686, https://github.com/corpglory/d3vue/, https://github.com/d2bjs/d2bjs
+
+4) more reactd3: https://github.com/chroth7/reactD3resources, https://github.com/chroth7/reactD3resources
 
 
 other things to explore: 

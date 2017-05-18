@@ -3,13 +3,29 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Getting Started with React and Webpack</title>
+    <title>Getting Started with Canvas, d3, and how to combine them with React</title>
 </head>
 
 <body>
-    <div id="app">
-
+			<!-- A title -->
+		<h3>Colored grids</h3>
+		<!-- An input field with a default value. -->
+		<input type="text" id="text-input" value="2000" onchange="update()">
+		<!-- An explanation... -->
+		<div id="text-explain">...takes numbers between 1 and 10k</div>
+		<!-- ...and a container for the vanilla canvas element. -->
+		<div id="vanilla">
     </div>
+    <!-- for later react version -->
+    <div id="app">
+    </div>
+    <!-- for the non-webpack, non-babel demo  with CDN-->
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-color.v1.min.js"></script>
+		<script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
+		<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="vanilla.js"></script>
+    <!-- for later react / jsx-babel version -->
     <script src="bundle.js"></script>
 </body>
 
