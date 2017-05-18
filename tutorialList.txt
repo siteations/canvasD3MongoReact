@@ -1,0 +1,18 @@
+'All elements drawn on the canvas element won’t manifest in the DOM and save a lot of work for the browser. They are drawn in immediate mode.' So Q is how this will virtual dom will mash up with virtual dom work in React or other front-end frames.
+
+1) https://medium.freecodecamp.com/d3-and-canvas-in-3-steps-8505c8b27444
+code at: http://blockbuilder.org/larsvers/6049de0bcfa50f95d3dcbf1e3e44ad48
+
+other d3 front-end frames and virtual dom mashups to tinker with
+2) Composing D3 Visualizations With Vue.js : https://medium.com/tyrone-tudehope/composing-d3-visualizations-with-vue-js-c65084ccb686, https://github.com/corpglory/d3vue/, https://github.com/d2bjs/d2bjs
+
+3) more reactd3: https://github.com/chroth7/reactD3resources, https://github.com/chroth7/reactD3resources
+
+
+other things to explore: 
+extending svg: https://www.visualcinnamon.com/2016/04/svg-beyond-mere-shapes.html
+
+
+
+
+
