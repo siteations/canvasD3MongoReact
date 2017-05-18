@@ -4,18 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Getting Started with Canvas, d3, and how to combine them with React</title>
+    <style>
+
+    div#tooltip {
+		  position: absolute;
+			display: inline-block;
+			padding: 10px;
+			font-family: 'Open Sans' sans-serif;
+			color: #000;
+		  background-color: #fff;
+			border: 1px solid #999;
+			border-radius: 2px;
+		  pointer-events: none;
+			opacity: 0;
+			z-index: 1;
+		}
+
+		div#tooltip2 {
+		  position: absolute;
+			display: inline-block;
+		  background-color: none;
+			border: 3px solid #000000;
+			opacity: 0;
+			z-index: .75;
+		}
+
+    </style>
 </head>
 
 <body>
 			<!-- A title -->
 		<h3>Colored grids</h3>
 		<!-- An input field with a default value. -->
-		<input type="text" id="text-input" value="2000" onchange="update()">
+		<input type="text" id="text-input" value="5000" onchange="update()">
 		<!-- An explanation... -->
 		<div id="text-explain">...takes numbers between 1 and 10k</div>
 		<!-- ...and a container for the vanilla canvas element. -->
 		<div id="vanilla">
     </div>
+    <div id="tooltip">hello</div>
+    <div id="tooltip2"></div>
     <!-- for later react version -->
     <div id="app">
     </div>

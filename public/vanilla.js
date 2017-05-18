@@ -5,7 +5,8 @@ const width = 750, height = 400;
 const canvas = d3.select('#vanilla')
   .append('canvas')
   .attr('width', width)
-  .attr('height', height);
+  .attr('height', height)
+  .attr('class', 'mainCanvas');
 
 const context = canvas.node().getContext('2d'); //sets up our drawing space
 
@@ -16,7 +17,7 @@ const update = function(){
 const data = [];
 
 let num = document.getElementById('text-input').value;
-console.log(num);
+//console.log(num);
 
 d3.range(num).forEach(el=> {
   data.push({ value: el });
@@ -91,16 +92,77 @@ function draw() {
   	let fill = node.attr('fillStyle');
 
 	  context.fillStyle = fill;
-	  context.fillRect(node.attr('x'), node.attr('y'), cellSize, cellSize);
+	  context.fillRect(node.attr('x'), node.attr('y'), node.attr('width'), node.attr('height'));
 
 	});
 
 } // draw()
 
+//---------- step 6) i'm adding my position listener here... not at all like the tutorial-----------------------
+
+function listen() {
+
+	d3.select('.mainCanvas').on('mousemove', function() {
+	  // Get mouse positions from the main canvas.
+	  var mouseX = d3.event.layerX || d3.event.offsetX;
+	  var mouseY = d3.event.layerY || d3.event.offsetY;
+
+	  var offX= d3.event.screenX-mouseX;
+	  var offY= d3.event.screenY-mouseY;
+
+	  //console.log(offX, offY);
+
+	  var color='';
+	  var pos=[];
+
+	  var elements = custom.selectAll('custom.rect');
+
+		elements.filter(function(d,i) { // simplified location comparison from the virtual dom (or why create another virtual object?), figure out edge-cases
+		  	var node = d3.select(this);
+		  	let x0 = node.attr('x'), x1=x0 + node.attr('width'), y0=node.attr('y'), y1=y0+node.attr('height');
+
+		  	if (mouseX>x0 && mouseX<x1 && mouseY>y0 && mouseY<y1){
+		  		color= node.attr('fillStyle');
+		  		pos = [node.attr('x'), node.attr('y'), node.attr('width')];
+		  	}
+
+			});
+
+		if (color) {
+  // Show the tooltip only when there is nodeData found by the mouse
+		    d3.select('#tooltip')
+		      .style('opacity', 0.8)
+		      .style('top', d3.event.pageY + 5 + 'px')
+		      .style('left', d3.event.pageX + 5 + 'px')
+		      .html(color.toString());
+
+		   d3.select('#tooltip2')
+		      .style('opacity', 1)
+		      .style('top', (+pos[1] + offY/2 - 4)+'px')
+		      .style('left', (+pos[0] + offX - 3)+'px')
+		      .style('width', (pos[2]-1) + 'px')
+		      .style('height', (pos[2]-1) + 'px');
+
+	  } else {
+	  // Hide the tooltip when the mouse doesn't find nodeData.
+
+	    d3.select('#tooltip').style('opacity', 0);
+	    d3.select('#tooltip2').style('opacity', 0);
+
+	  };
+
+
+	})
+
+}
+
 //--------- step 5) evoke and use for a static drawing-------------------
 
 databind(data);
 draw();
+listen();
+
+
 
 }
 
