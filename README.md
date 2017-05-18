@@ -3,7 +3,7 @@ This code will build from Lars Verspohl's [tutorial on medium](https://medium.fr
 
 This repository includes/will include:
 ### done
-+ a) vanilla front-end versions *(d3.select() with just the dom, some fake data, and canvas)* ### done
++ a) vanilla front-end versions *(d3.select() with just the dom, some fake data, and canvas)* 
 ### next
 + b) react component versions (to combine virtual DOM strategies) *(componentDidMount() loading of fake data, react rendering, and canvas)*
 and, to complete the full scenario,
