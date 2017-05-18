@@ -1,7 +1,7 @@
 # canvasD3MongoReact
 This code will build from Lars Verspohl's [tutorial on medium](https://medium.freecodecamp.com/d3-and-canvas-in-3-steps-8505c8b27444), on canvas-d3...
 
-This respository includes/will include:
+This repository includes/will include:
 + a) vanilla front-end versions *(d3.select() with just the dom, some fake data, and canvas)*
 + b) react component versions (to combine virtual DOM strategies) *(componentDidMount() loading of fake data, react rendering, and canvas)*
 and, to complete the full scenario,
